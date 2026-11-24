@@ -14,9 +14,10 @@ public class MySpringBootProject4Application {
     static DataSource dataSource;
 
 	public static void main(String[] args) {
-		SpringApplication.run(MySpringBootProject4Application.class, args);
-        System.out.println(dataSource.getClass().getName());
-	}
+//		SpringApplication.run(MySpringBootProject4Application.class, args);
+        SpringApplication application = new SpringApplication(MySpringBootProject4Application.class);
+        application.run(args);
+    }
 
     @Bean
     public String helloBean(){
