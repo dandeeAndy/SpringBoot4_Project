@@ -2,6 +2,8 @@ package com.inspirecamp7.myspringbootproject4.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "Customers")
 public class Customer {
@@ -11,5 +13,9 @@ public class Customer {
     @Column(nullable = false, unique = true)
     private String customerId;
 
-    private String customderName;
+    @Column(nullable = false)
+    private String customerName;
+
+    @Column()
+    LocalDateTime createAt = LocalDateTime.now();
 }
