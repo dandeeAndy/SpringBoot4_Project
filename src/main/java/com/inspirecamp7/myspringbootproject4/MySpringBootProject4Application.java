@@ -1,5 +1,6 @@
 package com.inspirecamp7.myspringbootproject4;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,5 +16,10 @@ public class MySpringBootProject4Application {
         //WebApplication Type 설정하기
         application.setWebApplicationType(WebApplicationType.SERVLET);
         application.run(args);
+    }
+
+    @Bean
+    public String helloBean() {
+        return new String("Hello 스프링부트");
     }
 }
