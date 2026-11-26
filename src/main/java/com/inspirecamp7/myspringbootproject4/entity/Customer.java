@@ -16,6 +16,6 @@ public class Customer {
     @Column(nullable = false)
     private String customerName;
 
-    @Column()
+    @Column(nullable = false, updatable = false)
     LocalDateTime createAt = LocalDateTime.now();
 }
